@@ -1,0 +1,10 @@
+spring: 
+  application: 
+    name: logback-demo
+  
+server: 
+  port: 9000
+  compression: 
+    enabled: true
+  tomcat: 
+    uri-encoding: UTF-8
