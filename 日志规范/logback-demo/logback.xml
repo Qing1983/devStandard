@@ -2,69 +2,149 @@
 <configuration>
 
 	<!-- 日志输出格式 -->
-	<property name="PATTERN"
-		value="%d{HH:mm:ss.SSS} %-5level [%thread] \\(%F:%L\\) - %msg%n" />
+	<property name="PATTERN" value="%d{HH:mm:ss.SSS} %-5level [%thread] \\(%F:%L\\) - %msg%n" />
 
-	<!-- test文件路径 -->
-	<property name="LOCAL_PATH" value="c:/log/" />
+	<!-- 日志存放路径 -->
+	<property name="LOG_PATH" value="/logs/" />
 
-	<!-- uat文件路径 -->
+	<!-- 应用名称 -->
+	<property name="APP_NAME" value="logback-demo" />
 
-
-	<!-- pro文件路径 -->
-	<property name="PRO_FILE_PATH" value="/opt/test/log" />
-
+	<!-- 文件大小 -->
+	<property name="FILE_SIZE" value="10MB"></property>
 
 	<!-- 控制台 -->
-	<appender name="CONSOLE"
-		class="ch.qos.logback.core.ConsoleAppender">
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
 			<pattern>${PATTERN}</pattern>
 		</encoder>
 	</appender>
 
+	<appender name="ERROR_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_PATH}/${APP_NAME}-log-error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 
+			<fileNamePattern>${LOG_PATH}/error/${APP_NAME}-log-error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
 
-	<!-- 本地环境 -->
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${FILE_SIZE}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<append>true</append>
+
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>${PATTERN}</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>error</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="DEBUG_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_PATH}/${APP_NAME}-log-debug.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+
+			<fileNamePattern>${LOG_PATH}/debug/${APP_NAME}-log-debug-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${FILE_SIZE}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<append>true</append>
+
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>${PATTERN}</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>debug</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="INFO_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_PATH}/${APP_NAME}-log-info.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+
+			<fileNamePattern>${LOG_PATH}/info/${APP_NAME}-log-info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>${FILE_SIZE}</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<append>true</append>
+
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>${PATTERN}</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>error</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
 	<springProfile name="local">
-		<root level="info">
+		<root level="DEBUG">
+			<appender-ref ref="ERROR_APPENDER" />
+			<appender-ref ref="DEBUG_APPENDER" />
+			<appender-ref ref="INFO_APPENDER" />
+			<!--<appender-ref ref="DB_APPENDER"/> -->
 			<appender-ref ref="CONSOLE" />
 		</root>
 	</springProfile>
 
-	<!-- 开发环境 -->
 	<springProfile name="dev">
-		<appender name="CONSOLE"
-			class="ch.qos.logback.core.ConsoleAppender">
-			<encoder>
-				<pattern>${PATTERN}</pattern>
-			</encoder>
-		</appender>
-		<root level="debug">
+		<root level="DEBUG">
+			<!--<appender-ref ref="ERROR_APPENDER"/> -->
+			<!--<appender-ref ref="DEBUG_APPENDER"/> -->
+			<!--<appender-ref ref="INFO_APPENDER"/> -->
+			<!--<appender-ref ref="DB_APPENDER"/> -->
 			<appender-ref ref="CONSOLE" />
 		</root>
 	</springProfile>
 
-	<!-- 生产环境 -->
-	<springProfile name="prod">
-		<appender name="PROD_FILE"
-			class="ch.qos.logback.core.rolling.RollingFileAppender">
-			<file>${PRO_FILE_PATH}</file>
-			<rollingPolicy
-				class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-				<fileNamePattern>${PRO_FILE_PATH}/warn.%d{yyyy-MM-dd}.log
-				</fileNamePattern>
-				<MaxHistory>100</MaxHistory>
-			</rollingPolicy>
-			<layout class="ch.qos.logback.classic.PatternLayout">
-				<pattern>${PATTERN}</pattern>
-			</layout>
-		</appender>
-		<root level="warn">
-			<appender-ref ref="PROD_FILE" />
+	<springProfile name="rc">
+		<root level="DEBUG">
+			<!--<appender-ref ref="ERROR_APPENDER"/> -->
+			<!--<appender-ref ref="DEBUG_APPENDER"/> -->
+			<!--<appender-ref ref="INFO_APPENDER"/> -->
+			<!--<appender-ref ref="DB_APPENDER"/> -->
+			<appender-ref ref="CONSOLE" />
 		</root>
 	</springProfile>
-	<logger name="com.cloud.paas.portal" level="DEBUG" />
 
+	<springProfile name="uat">
+		<root level="DEBUG">
+			<!--<appender-ref ref="ERROR_APPENDER"/> -->
+			<!--<appender-ref ref="DEBUG_APPENDER"/> -->
+			<!--<appender-ref ref="INFO_APPENDER"/> -->
+			<!--<appender-ref ref="DB_APPENDER"/> -->
+			<appender-ref ref="CONSOLE" />
+		</root>
+	</springProfile>
+
+	<springProfile name="prod">
+		<root level="DEBUG">
+			<!--<appender-ref ref="ERROR_APPENDER"/> -->
+			<!--<appender-ref ref="DEBUG_APPENDER"/> -->
+			<!--<appender-ref ref="INFO_APPENDER"/> -->
+			<!--<appender-ref ref="DB_APPENDER"/> -->
+			<appender-ref ref="CONSOLE" />
+		</root>
+	</springProfile>
+
+	<logger name="net.nieqing.logbackdemo" level="DEBUG" />
 
 </configuration>
