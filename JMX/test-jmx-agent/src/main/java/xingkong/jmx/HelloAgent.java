@@ -1,4 +1,4 @@
-package com.xingkong.test.jmx;
+package xingkong.jmx;
 
 import com.sun.jdmk.comm.HtmlAdaptorServer;
 

@@ -1,4 +1,4 @@
-package com.xingkong.test.jmx;
+package xingkong.jmx;
 
 import java.io.IOException;
 import java.util.Iterator;

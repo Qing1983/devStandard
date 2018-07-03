@@ -35,7 +35,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>HelloClient</finalName>
+		<finalName>HelloAgent</finalName>
 
 		<plugins>
 
@@ -48,7 +48,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>. lib/</classpathPrefix>
-							<mainClass>com.xingkong.test.jmx.Client</mainClass>
+							<mainClass>xingkong.jmx.HelloAgent</mainClass>
 						</manifest>
 					</archive>
 

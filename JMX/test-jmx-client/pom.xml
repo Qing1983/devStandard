@@ -48,7 +48,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>. lib/</classpathPrefix>
-							<mainClass>com.xingkong.test.jmx.Client</mainClass>
+							<mainClass>xingkong.jmx.Client</mainClass>
 						</manifest>
 					</archive>
 

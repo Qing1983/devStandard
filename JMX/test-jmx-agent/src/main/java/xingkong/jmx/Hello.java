@@ -1,4 +1,4 @@
-package com.xingkong.test.jmx;
+package xingkong.jmx;
 
 public class Hello implements HelloMBean {
 
