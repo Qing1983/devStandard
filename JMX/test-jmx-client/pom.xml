@@ -27,9 +27,18 @@
 			<artifactId>jmxri</artifactId>
 			<version>1.2.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.6</version>
+		</dependency>
+
+
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
+			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.6</version>
 		</dependency>
 

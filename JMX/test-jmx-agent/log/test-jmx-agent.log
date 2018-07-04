@@ -1,0 +1,129 @@
+2018-07-04 18:06:41,388 INFO [xingkong.config.Config] - 没有配置环境，使用本地配置local
+2018-07-04 18:06:41,389 INFO [xingkong.config.Config] - 当前的环境是: local
+2018-07-04 18:06:41,424 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:06:41,425 INFO [xingkong.config.Config] -                     CONFIG                
+2018-07-04 18:06:41,425 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:06:41,425 INFO [xingkong.config.Config] - ip=
+2018-07-04 18:06:41,425 INFO [xingkong.config.Config] - port=
+2018-07-04 18:06:41,425 INFO [xingkong.config.Config] - domainName=
+2018-07-04 18:06:41,425 INFO [xingkong.jmx.HelloAgent] - 开始测试
+2018-07-04 18:06:41,470 ERROR [xingkong.jmx.HelloAgent] - [ERROR]tmxclient occur a error by class java.lang.NumberFormatException
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at xingkong.jmx.HelloAgent.testJmxAgent(HelloAgent.java:50)
+	at xingkong.jmx.HelloAgent.main(HelloAgent.java:70)
+2018-07-04 18:06:41,472 INFO [xingkong.jmx.HelloAgent] - 测试结束
+2018-07-04 18:07:16,777 INFO [xingkong.config.Config] - 没有配置环境，使用本地配置dev
+2018-07-04 18:07:16,778 INFO [xingkong.config.Config] - 当前的环境是: dev
+2018-07-04 18:07:16,817 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:07:16,817 INFO [xingkong.config.Config] -                     CONFIG                
+2018-07-04 18:07:16,817 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:07:16,817 INFO [xingkong.config.Config] - ip=
+2018-07-04 18:07:16,817 INFO [xingkong.config.Config] - port=
+2018-07-04 18:07:16,817 INFO [xingkong.config.Config] - domainName=
+2018-07-04 18:07:16,817 INFO [xingkong.jmx.HelloAgent] - 开始测试
+2018-07-04 18:07:16,863 ERROR [xingkong.jmx.HelloAgent] - [ERROR]tmxclient occur a error by class java.lang.NumberFormatException
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at xingkong.jmx.HelloAgent.testJmxAgent(HelloAgent.java:50)
+	at xingkong.jmx.HelloAgent.main(HelloAgent.java:70)
+2018-07-04 18:07:16,866 INFO [xingkong.jmx.HelloAgent] - 测试结束
+2018-07-04 18:08:34,464 INFO [xingkong.config.Config] - 没有配置环境，使用本地配置dev
+2018-07-04 18:08:34,465 INFO [xingkong.config.Config] - 当前的环境是: dev
+2018-07-04 18:08:34,465 INFO [xingkong.config.Config] - fileName is application-dev.properties
+2018-07-04 18:08:34,501 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:08:34,501 INFO [xingkong.config.Config] -                     CONFIG                
+2018-07-04 18:08:34,501 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:08:34,501 INFO [xingkong.config.Config] - ip=
+2018-07-04 18:08:34,501 INFO [xingkong.config.Config] - port=
+2018-07-04 18:08:34,502 INFO [xingkong.config.Config] - domainName=
+2018-07-04 18:08:34,502 INFO [xingkong.jmx.HelloAgent] - 开始测试
+2018-07-04 18:08:34,546 ERROR [xingkong.jmx.HelloAgent] - [ERROR]tmxclient occur a error by class java.lang.NumberFormatException
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at xingkong.jmx.HelloAgent.testJmxAgent(HelloAgent.java:50)
+	at xingkong.jmx.HelloAgent.main(HelloAgent.java:70)
+2018-07-04 18:08:34,548 INFO [xingkong.jmx.HelloAgent] - 测试结束
+2018-07-04 18:09:04,322 INFO [xingkong.config.Config] - 没有配置环境，使用本地配置dev
+2018-07-04 18:09:04,322 INFO [xingkong.config.Config] - 当前的环境是: dev
+2018-07-04 18:09:04,323 INFO [xingkong.config.Config] - fileName is application-dev.properties
+2018-07-04 18:09:04,362 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:09:04,362 INFO [xingkong.config.Config] -                     CONFIG                
+2018-07-04 18:09:04,362 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:09:04,362 INFO [xingkong.config.Config] - ip=
+2018-07-04 18:09:04,362 INFO [xingkong.config.Config] - port=
+2018-07-04 18:09:04,362 INFO [xingkong.config.Config] - domainName=
+2018-07-04 18:09:04,362 INFO [xingkong.jmx.HelloAgent] - 开始测试
+2018-07-04 18:09:04,406 ERROR [xingkong.jmx.HelloAgent] - [ERROR]tmxclient occur a error by class java.lang.NumberFormatException
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at xingkong.jmx.HelloAgent.testJmxAgent(HelloAgent.java:50)
+	at xingkong.jmx.HelloAgent.main(HelloAgent.java:70)
+2018-07-04 18:09:04,413 INFO [xingkong.jmx.HelloAgent] - 测试结束
+2018-07-04 18:09:40,284 INFO [xingkong.config.Config] - 没有配置环境，使用本地配置dev
+2018-07-04 18:09:40,284 INFO [xingkong.config.Config] - 当前的环境是: dev
+2018-07-04 18:09:40,284 INFO [xingkong.config.Config] - fileName is application-dev.properties
+2018-07-04 18:09:40,324 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:09:40,324 INFO [xingkong.config.Config] -                     CONFIG                
+2018-07-04 18:09:40,324 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:09:40,324 INFO [xingkong.config.Config] - ip=
+2018-07-04 18:09:40,324 INFO [xingkong.config.Config] - port=
+2018-07-04 18:09:40,324 INFO [xingkong.config.Config] - domainName=
+2018-07-04 18:09:40,324 INFO [xingkong.jmx.HelloAgent] - 开始测试
+2018-07-04 18:09:40,367 ERROR [xingkong.jmx.HelloAgent] - [ERROR]tmxclient occur a error by class java.lang.NumberFormatException
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at xingkong.jmx.HelloAgent.testJmxAgent(HelloAgent.java:50)
+	at xingkong.jmx.HelloAgent.main(HelloAgent.java:70)
+2018-07-04 18:09:40,371 INFO [xingkong.jmx.HelloAgent] - 测试结束
+2018-07-04 18:10:40,901 INFO [xingkong.config.Config] - 没有配置环境，使用本地配置dev
+2018-07-04 18:10:42,299 INFO [xingkong.config.Config] - 当前的环境是: dev
+2018-07-04 18:10:43,793 INFO [xingkong.config.Config] - fileName is application-dev.properties
+2018-07-04 18:14:03,287 INFO [xingkong.config.Config] - 没有配置环境，使用本地配置dev
+2018-07-04 18:14:03,287 INFO [xingkong.config.Config] - 当前的环境是: dev
+2018-07-04 18:14:03,287 INFO [xingkong.config.Config] - fileName is /application-dev.properties
+2018-07-04 18:14:03,288 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:14:03,288 INFO [xingkong.config.Config] -                     CONFIG                
+2018-07-04 18:14:03,288 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:14:03,288 INFO [xingkong.config.Config] - ip=
+2018-07-04 18:14:03,288 INFO [xingkong.config.Config] - port=
+2018-07-04 18:14:03,288 INFO [xingkong.config.Config] - domainName=
+2018-07-04 18:14:03,288 INFO [xingkong.jmx.HelloAgent] - 开始测试
+2018-07-04 18:14:03,288 INFO [xingkong.jmx.HelloAgent] - 系统正在启动...
+2018-07-04 18:14:03,347 ERROR [xingkong.jmx.HelloAgent] - [ERROR]tmxclient occur a error by class java.lang.NumberFormatException
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at xingkong.jmx.HelloAgent.testJmxAgent(HelloAgent.java:50)
+	at xingkong.jmx.HelloAgent.main(HelloAgent.java:70)
+2018-07-04 18:14:03,354 INFO [xingkong.jmx.HelloAgent] - 测试结束
+2018-07-04 18:14:40,233 INFO [xingkong.config.Config] - 没有配置环境，使用本地配置dev
+2018-07-04 18:14:40,233 INFO [xingkong.config.Config] - 当前的环境是: dev
+2018-07-04 18:14:40,233 INFO [xingkong.config.Config] - fileName is /application-dev.properties
+2018-07-04 18:14:40,275 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:14:40,275 INFO [xingkong.config.Config] -                     CONFIG                
+2018-07-04 18:14:40,275 INFO [xingkong.config.Config] - ==========================================
+2018-07-04 18:14:40,275 INFO [xingkong.config.Config] - ip=
+2018-07-04 18:14:40,275 INFO [xingkong.config.Config] - port=
+2018-07-04 18:14:40,275 INFO [xingkong.config.Config] - domainName=
+2018-07-04 18:14:40,275 INFO [xingkong.jmx.HelloAgent] - 开始测试
+2018-07-04 18:14:40,275 INFO [xingkong.jmx.HelloAgent] - 系统正在启动...
+2018-07-04 18:14:40,317 ERROR [xingkong.jmx.HelloAgent] - [ERROR]tmxclient occur a error by class java.lang.NumberFormatException
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at xingkong.jmx.HelloAgent.testJmxAgent(HelloAgent.java:50)
+	at xingkong.jmx.HelloAgent.main(HelloAgent.java:70)
+2018-07-04 18:14:40,319 INFO [xingkong.jmx.HelloAgent] - 测试结束
